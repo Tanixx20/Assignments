@@ -1,0 +1,152 @@
+Ans1.
+
+#include<stdio.h>
+void printN(int);
+int main()
+{
+    int x;
+    printf("Enter the value of N :");
+    scanf("%d",&x);
+    printN(x);
+    return 0;
+}
+void printN(int n)
+{
+    if(n>0)
+    {
+         printN(n-1);
+        printf(" %d",n);
+    }
+}
+
+Ans2.
+
+#include<stdio.h>
+void printN(int);
+int main()
+{
+    int x;
+    printf("Enter the value of N :");
+    scanf("%d",&x);
+    printN(x);
+    return 0;
+}
+void printN(int n)
+{
+    if(n>=1)
+    {
+        printf(" %d",n);
+         printN(n-1);
+    }
+}
+
+Ans3.
+
+#include<stdio.h>
+void odd(int);
+int main()
+{
+    int x;
+    printf("Enter the value of N :");
+    scanf("%d",&x);
+    odd(x);
+    return 0;
+}
+void odd(int n)
+{
+    if(n>=0)
+    {
+         odd(n-1);
+        printf(" %d",2*n+1);
+    }
+}
+
+Ans4.
+
+#include<stdio.h>
+void odd(int);
+int main()
+{
+    int x;
+    printf("Enter the value of N :");
+    scanf("%d",&x);
+    odd(x);
+    return 0;
+}
+void odd(int n)
+{
+    if(n>=0)
+    {
+        printf(" %d",2*n+1);
+         odd(n-1);
+    }
+}
+
+Ans5.
+
+#include<stdio.h>
+void even(int);
+int main()
+{
+    int n;
+    printf("Enter the number :");
+    scanf("%d",&n);
+    even(n);
+    return 0;
+}
+void even(int x)
+{
+    if(x>0)
+    {
+        even(x-1);
+        printf(" %d",2*x);
+    }
+}
+
+
+Ans.6
+
+#include<stdio.h>
+void even(int);
+int main()
+{
+    int n;
+    printf("Enter the number :");
+    scanf("%d",&n);
+    even(n);
+    return 0;
+}
+void even(int x)
+{
+    if(x>0)
+    {
+        printf(" %d",2*x);
+        even(x-1);
+    }
+}
+
+
+Ans7.
+
+#include<stdio.h>
+void square(int);
+int main()
+{
+    int n;
+    printf("Enter a number :");
+    scanf("%d",&n);
+    square(n);
+    return 0;
+}
+void square(int x)
+{
+    int k;
+    if(x==1)
+    {
+      printf("1");
+            return 1;
+    }
+    square(x-1);
+    printf(" %d",x*x);
+    return x;
+}
