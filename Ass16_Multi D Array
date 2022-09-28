@@ -1,0 +1,278 @@
+Ans1.
+
+#include<stdio.h>
+int main()
+{
+    int a[3][3],b[3][3],c[3][3],i,j;
+    printf("Enter the no of 1st array :\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+            scanf("%d",&a[i][j]);
+    }
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+            printf("%d ",a[i][j]);
+        printf("\n");
+    }
+    printf("Enter the no of 2nd array :\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+            scanf("%d",&b[i][j]);
+    }
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+            printf("%d ",b[i][j]);
+        printf("\n");
+    }
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+            c[i][j]=a[i][j]+b[i][j];
+    }
+    printf("Sum is :\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+            printf("%d ",c[i][j]);
+        printf("\n");
+    }
+    return 0;
+}
+
+
+Ans2.
+
+
+#include<stdio.h>
+int main()
+{
+    int a[3][3],b[3][3],c[3][3],i,j,s,k;
+    printf("Enter the element of 1st array :\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+            scanf("%d",&a[i][j]);
+    }
+    printf("Enter the element of 2nd array :\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+            scanf("%d",&b[i][j]);
+    }
+    printf("Product of matrices is :\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            s=0;
+            for(k=0;k<3;k++)
+            {
+            s=s+a[i][k]*b[k][j];
+            }
+            c[i][j]=s;
+        }
+    }
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+            printf("%d ",c[i][j]);
+        printf("\n");
+    }
+    return 0;
+}
+
+
+Ans3.
+
+#include<stdio.h>
+int main()
+{
+    int a[3][3],i,j;
+    printf("Enter the element of array :\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+            scanf("%d",&a[i][j]);
+    }
+    printf("Transpose is :\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+            printf("%d ",a[j][i]);
+        printf("\n");
+    }
+    return 0;
+}
+
+
+Ans4.
+
+#include<stdio.h>
+int main()
+{
+    int a[3][3],i,j,s=0;
+    printf("Enter the element of array :\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+            scanf("%d",&a[i][j]);
+    }
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+            printf("%d ",a[i][j]);
+        printf("\n");
+    }
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            if(i==j)
+                s=s+a[i][j];
+        }
+    }
+    printf("Sum of right diagonal is : %d",s);
+    return 0;
+}
+
+
+Ans5.
+
+
+#include<stdio.h>
+int main()
+{
+    int a[3][3],i,j,s=0;
+    printf("Enter the element of array :\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+            scanf("%d",&a[i][j]);
+    }
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+            printf("%d ",a[i][j]);
+        printf("\n");
+    }
+    i=0;
+        for(j=2;j>=0;j--)
+        {
+            if(i<3)
+                s=s+a[i][j];
+            i++;
+        }
+    printf("Sum of left diagonal is : %d",s);
+    return 0;
+}
+
+
+Ans6.
+
+#include<stdio.h>
+int main()
+{
+    int a[3][3],i,j,s,x=1,y=1;
+    printf("Enter the element of array :\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+            scanf("%d",&a[i][j]);
+    }
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+            printf("%d ",a[i][j]);
+        printf("\n");
+    }
+    for(i=0;i<3;i++)
+    {
+        s=0;
+        for(j=0;j<3;j++)
+          {
+              s=s+a[i][j];
+          }
+          printf("\nSum of %d row is : %d",x,s);
+          x++;
+    }
+    printf("\n");
+    for(j=0;j<3;j++)
+    {
+        s=0;
+        i=0;
+        while(i<3&&j<3)
+        {
+        s=s+a[i][j];
+        i++;
+        }
+        printf("\nSum of %d coloumn is : %d",y,s);
+        y++;
+    }
+    return 0;
+}
+
+
+Ans.7
+
+#include<stdio.h>
+int main()
+{
+    int a[3][3],i,j,s,x=1,y=1;
+    printf("Enter the element of array :\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+            scanf("%d",&a[i][j]);
+    }
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+            printf("%d ",a[i][j]);
+        printf("\n");
+    }
+    printf("\nLower triangular of matrix :\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            if(i>j)
+                printf("%d\n",a[i][j]);
+        }
+    }
+    return 0;
+}
+
+
+Ans8.
+
+#include<stdio.h>
+int main()
+{
+    int a[3][3],i,j,s,x=1,y=1;
+    printf("Enter the element of array :\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+            scanf("%d",&a[i][j]);
+    }
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+            printf("%d ",a[i][j]);
+        printf("\n");
+    }
+    printf("\nUpper triangular of matrix :\n");
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            if(i<j)
+                printf("%d\n",a[i][j]);
+        }
+    }
+    return 0;
+}
