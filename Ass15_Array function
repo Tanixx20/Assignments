@@ -122,30 +122,39 @@ Ans7.
 
 
 #include<stdio.h>
+int reverse(int b[],int x);
 int main()
 {
-    int a[50];
-    duplicate(a,50);
+    int a[10],c;
+    c=reverse(a,10);
+    printf("Total number of duplicate elements in an array is %d ",c);
     return 0;
 }
-void duplicate(int b[],int x)
+int reverse(int b[],int x)
 {
-    int n,i,j,count=0;
-    printf("Enter the number of element :");
-    scanf("%d",&n);
-    printf("Enter %d number of elemnt :\n",n);
-    for(i=0;i<n;i++)
+    int i,count=0,j;
+    printf("Enter %d  numbers:\n");
+    for(i=0;i<=9;i++)
         scanf("%d",&b[i]);
-    printf("Total duplicate element is :\n");
-    for(i=0;i<n;i++)
+    for(i=0;i<=9;i++)
     {
-        for(j=i+1;j<=n;j++)
+        for(j=i+1;j<=9;j++)
         {
-            if(b[i]==b[j])
+            if(((b[i]!=0))&&(b[i]==b[j]))
+            {
                 count++;
+                break;
+            }
+        }
+        for(j=i+1;j<=9;j++)
+        {
+            if(((b[i]!=0))&&(b[i]==b[j]))
+            {
+                b[j]=0;
+            }
         }
     }
-    printf("%d",count);
+    return count;
 }
 
 
